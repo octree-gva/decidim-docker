@@ -91,11 +91,24 @@ module Decidim
       @ruby_version ||= gemfile_lock.ruby_version.to_s
     end
 
+    # Same-minor floor for the 2026-11-18 regexp and string case-conversion fixes.
+    # https://www.ruby-lang.org/en/news/2026/11/18/multiple-vulnerabilities-in-regexp-and-string/
+    # 3.2 is EOL and has no release for this advisory, so the upstream lock stays.
+    PATCHED_RUBY = {
+      "3.3" => "3.3.14",
+      "3.4" => "3.4.13"
+    }.freeze
+
     ##
     # Return the stable ruby version for the decidim version.
-    # eg: "ruby 3.3.3" will return 3.3.3
+    # eg: "ruby 3.3.3" will return 3.3.3, raised to PATCHED_RUBY when the lock is older.
     def ruby_version
-      gemfile_ruby_version.match(/^(ruby )(\d+\.\d+\.\d+)/)[2]
+      locked = gemfile_ruby_version.match(/^(ruby )(\d+\.\d+\.\d+)/)[2]
+      minor = locked.split(".").first(2).join(".")
+      patched = PATCHED_RUBY[minor]
+      return locked if patched.nil?
+
+      Gem::Version.new(locked) >= Gem::Version.new(patched) ? locked : patched
     end
 
     ##

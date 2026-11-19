@@ -6,6 +6,6 @@ ubuntu:
     version: "26.04"
 redhat:
   - name: ubi9
-    version: "9.8"
+    version: "9.9"
   - name: ubi8
     version: "8.10"

@@ -38,7 +38,7 @@ To use other distributions, these are available:
 | --- | --- | --- | --- | --- | --- |
 | Ubuntu noble (24.04) | `:noble-0.33.0.dev` | `:noble-0.32.2` | `:noble-0.31.8` | `:noble-0.30.9` | `:noble-0.29.7` |
 | Ubuntu resolute (26.04) | `:resolute-0.33.0.dev` | `:resolute-0.32.2` | `:resolute-0.31.8` | `:resolute-0.30.9` | `:resolute-0.29.7` |
-| Redhat ubi9 (9.8) | `:ubi9-0.33.0.dev` | `:ubi9-0.32.2` | `:ubi9-0.31.8` | `:ubi9-0.30.9` | `:ubi9-0.29.7` |
+| Redhat ubi9 (9.9) | `:ubi9-0.33.0.dev` | `:ubi9-0.32.2` | `:ubi9-0.31.8` | `:ubi9-0.30.9` | `:ubi9-0.29.7` |
 | Redhat ubi8 (8.10) | `:ubi8-0.33.0.dev` | `:ubi8-0.32.2` | `:ubi8-0.31.8` | `:ubi8-0.30.9` | `:ubi8-0.29.7` |
 
 

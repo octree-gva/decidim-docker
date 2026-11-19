@@ -1,6 +1,6 @@
 ARG OS_NAME=ubi9
 ARG OS_MAJOR_VERSION=9
-ARG OS_VERSION=9.8
+ARG OS_VERSION=9.9
 ARG NODE_MAJOR_VERSION
 
 # Single base with all dependencies
@@ -104,6 +104,9 @@ RUN for attempt in 1 2 3; do \
   && npm install -g yarn \
   && dnf clean all \
   && rm -rf /tmp/* /var/tmp/* ~/.cache
+
+# Upstream .ruby-version stays on the unpatched lock. rbenv must use the image Ruby.
+ENV RBENV_VERSION=$RUBY_VERSION
 
 ##
 # Generator Image

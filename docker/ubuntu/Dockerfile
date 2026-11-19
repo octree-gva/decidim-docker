@@ -117,6 +117,9 @@ RUN export PATH="/home/decidim/.rbenv/bin:$PATH" \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* ~/.cache
 
+# Upstream .ruby-version stays on the unpatched lock. rbenv must use the image Ruby.
+ENV RBENV_VERSION=$RUBY_VERSION
+
 ##
 # Generator Image 
 ##
