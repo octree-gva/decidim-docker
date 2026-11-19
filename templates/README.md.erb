@@ -161,7 +161,7 @@ docker exec <container> bin/check
 | `WEB_CONCURRENCY` | `2` |
 | `VIPS_CONCURRENCY` | `[1, WEB_CONCURRENCY / 3].max`, unless you set it |
 | `LD_PRELOAD` | `/usr/lib/libjemalloc.so.2` |
-| `MALLOC_CONF` | `dirty_decay_ms:1000,muzzy_decay_ms:1000,narenas:2,background_thread:true,abort_conf:true` |
+| `MALLOC_CONF` | `dirty_decay_ms:1000,muzzy_decay_ms:1000,narenas:2,background_thread:false,abort_conf:true` |
 
 Override any of these in Compose. Unset `VIPS_CONCURRENCY` to keep the formula.
 

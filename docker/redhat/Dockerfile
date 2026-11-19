@@ -110,7 +110,7 @@ RUN for attempt in 1 2 3; do \
 ##
 FROM base AS generator
 ENV LD_PRELOAD="/usr/lib/libjemalloc.so.2" \
-    MALLOC_CONF="dirty_decay_ms:1000,muzzy_decay_ms:1000,narenas:2,background_thread:true,abort_conf:true" \
+    MALLOC_CONF="dirty_decay_ms:1000,muzzy_decay_ms:1000,narenas:2,background_thread:false,abort_conf:true" \
     BUNDLE_APP_CONFIG="/home/decidim/.bundle" \
     BUNDLE_DISABLE_SHARED_GEMS=true \
     DECIDIM_SPAM_DETECTION_BACKEND_RESOURCE=memory \
@@ -226,7 +226,7 @@ ENV BUNDLE_APP_CONFIG="/home/decidim/.bundle" \
     HOME=/home/decidim \
     PATH="/home/decidim/.rbenv/bin:/home/decidim/.rbenv/shims:/home/decidim/bin:${PATH}" \
     LD_PRELOAD=/usr/lib/libjemalloc.so.2 \
-    MALLOC_CONF=dirty_decay_ms:1000,muzzy_decay_ms:1000,narenas:2,background_thread:true,abort_conf:true
+    MALLOC_CONF=dirty_decay_ms:1000,muzzy_decay_ms:1000,narenas:2,background_thread:false,abort_conf:true
 
 RUN rm -rf $WORK_DIR \
     && groupadd -g 1000 decidim \
