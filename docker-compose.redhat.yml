@@ -35,11 +35,11 @@ services:
         NODE_MAJOR_VERSION: "24"
         BUNDLER_VERSION: "2.4.20"
         RUBY_VERSION: "3.4.13"
-        VCS_REF: "ceee4da4e413b1b58fbd73fdac515779cc701c79"
-        VCS_REF_SHORT: "ceee4da4"
-        VCS_REF_DATE: "2026-11-25"
+        VCS_REF: "bb6383af157ac70db266924d7d5ae0a5a6bc5e72"
+        VCS_REF_SHORT: "bb6383af"
+        VCS_REF_DATE: "2026-11-26"
         VERSION: "0.33.0.dev"
-        BUILD_DATE: "2026-11-26T04:34:59+00:00"
+        BUILD_DATE: "2026-11-27T04:39:05+00:00"
     ports:
       - "3001:3000"
     environment:
@@ -60,11 +60,11 @@ services:
         NODE_MAJOR_VERSION: "22"
         BUNDLER_VERSION: "2.4.20"
         RUBY_VERSION: "3.4.13"
-        VCS_REF: "75335286d98a617b8361335e6c1f954f7d3a1eca"
-        VCS_REF_SHORT: "75335286"
-        VCS_REF_DATE: "2026-11-25"
+        VCS_REF: "fb0edb0cc3a9c28116ec124ac822772cf531df51"
+        VCS_REF_SHORT: "fb0edb0c"
+        VCS_REF_DATE: "2026-11-26"
         VERSION: "0.32.3"
-        BUILD_DATE: "2026-11-26T04:35:00+00:00"
+        BUILD_DATE: "2026-11-27T04:39:06+00:00"
     ports:
       - "3002:3000"
     environment:
@@ -85,11 +85,11 @@ services:
         NODE_MAJOR_VERSION: "22"
         BUNDLER_VERSION: "2.4.20"
         RUBY_VERSION: "3.3.14"
-        VCS_REF: "30a1a05f48f475bfa457a4e2e58c92317c7ea5d2"
-        VCS_REF_SHORT: "30a1a05f"
-        VCS_REF_DATE: "2026-11-25"
+        VCS_REF: "ab063f5356bba30eded565cfe8c51f8a426b591d"
+        VCS_REF_SHORT: "ab063f53"
+        VCS_REF_DATE: "2026-11-26"
         VERSION: "0.31.9"
-        BUILD_DATE: "2026-11-26T04:35:01+00:00"
+        BUILD_DATE: "2026-11-27T04:39:07+00:00"
     ports:
       - "3003:3000"
     environment:
@@ -114,7 +114,7 @@ services:
         VCS_REF_SHORT: "07c31c41"
         VCS_REF_DATE: "2026-07-01"
         VERSION: "0.30.9"
-        BUILD_DATE: "2026-11-26T04:35:02+00:00"
+        BUILD_DATE: "2026-11-27T04:39:08+00:00"
     ports:
       - "3004:3000"
     environment:
@@ -139,7 +139,7 @@ services:
         VCS_REF_SHORT: "c8535dac"
         VCS_REF_DATE: "2025-12-09"
         VERSION: "0.29.7"
-        BUILD_DATE: "2026-11-26T04:35:03+00:00"
+        BUILD_DATE: "2026-11-27T04:39:09+00:00"
     ports:
       - "3005:3000"
     environment:
